@@ -897,7 +897,7 @@ void Node::_setChildren(ccstd::vector<IntrusivePtr<Node>> &&children) {
 
 void Node::destruct() {
     CCObject::destruct();
-    _children.clear();
+    this->removeAllChildren();
     _scene = nullptr;
     _userData = nullptr;
 }
